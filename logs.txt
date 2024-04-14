@@ -1,0 +1,87 @@
+git init
+git remote add origin https://github.com/aciristov/SI_2024_lab1_122093.git
+git add README.md
+git status
+git add .
+git commit -m "Initial commit"
+git status # After creating the three java files
+git add .
+git commit -m "Add starter code"
+git push origin master
+git pull
+git pull origin master
+git fetch # Sometimes pull will not create brances local from remote, fetch does it after pulling
+git checkout bug1
+git status # changes that are made on SILab1_1.java
+git add .
+git status
+git commit -m "Fix wrong condition in filterOddLengthStrings"
+git checkout bug2
+git status # changes that are made on SILab1_2.java
+git add .
+git commit -m "Fix wrong condition in makeBigStringFrom"
+git checkout bug1
+git add .
+git status
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   SILab1Main.java
+git commit -m "Call method filterOddLengthStrings in main class"
+git checkout bug2
+git status
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   SILab1Main.java
+git add .
+git commit -m "Call method makeBigStringFrom in main class"
+git push
+git checkout bug1
+git push
+git checkout master
+git merge bug1
+git push origin master
+git checkout bug2
+git rebase master
+
+	error: could not apply 8bc03e9... Call method makeBigStringFrom in main class
+	hint: Resolve all conflicts manually, mark them as resolved with
+	hint: "git add/rm <conflicted_files>", then run "git rebase --continue".
+	hint: You can instead skip this commit: run "git rebase --skip".
+	hint: To abort and get back to the state before "git rebase", run "git rebase --abort".
+	Could not apply 8bc03e9... Call method makeBigStringFrom in main class
+	
+git add SILab1Main.java # After solving conflicts. As conflicts appear, i resolved and decided to keep both rows, one after another.
+git rebase --continue
+git checkout master
+git merge bug2
+git push origin master
+git checkout bug2
+git push
+	 ! [rejected]        bug2 -> bug2 (non-fast-forward)
+	error: failed to push some refs to 'https://github.com/aciristov/SI_2024_lab1_122093.git'
+	hint: Updates were rejected because the tip of your current branch is behind
+	hint: its remote counterpart. Integrate the remote changes (e.g.
+	hint: 'git pull ...') before pushing again.
+	hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+	
+C:\Users\aciri\OneDrive\Documents\si\SI_2024_lab1_122093>git pull
+Auto-merging SILab1Main.java
+CONFLICT (content): Merge conflict in SILab1Main.java
+Automatic merge failed; fix conflicts and then commit the result.
+	
+	#Here i resolved conflicts on bug2 branch on remote. I decided again to resolve the conflict to keep both rows in SILab1Main.java
+	
+git statusUnmerged paths:
+  (use "git add <file>..." to mark resolution)
+        both modified:   SILab1Main.java
+
+git add .
+git commit -m "conflicts resolved"
+git push
+git checkout bug1
+git status
+git checkout master
+git status
+git checkout bug2
+git status

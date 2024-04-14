@@ -1,0 +1,8 @@
+logs.txt i 122093.txt se postaveni samo na master grankata posle resavanjeto na prethodnite prasanja.
+Vo logs.txt pri resavanjeto na zadacata, kako komentari imam opisano kako i zosto izlezot e toj.
+Vo glavno za rebase i merge, pri resavanjeto na konflikti, vo klasata SILab1Main gi imam zadrzano i dvata reda eden po drug:
+System.out.println(SILab1_1.filterOddLengthStrings(list));
+System.out.println(SILab1_2.makeBigStringFrom(list));
+Grankata bug1  ne dade conflict, kako prva granka od master, i direktno promenite bea vidlivi na remote.
+Grankite bug2 i master imaa konflikti koi se resheni direktno vo IDE i dodeka bev vo rebase status.
+Za postavuvanje na logs.txt i 122093.logs vo master, porakata na commit kje bide "Final commit"
