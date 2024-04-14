@@ -1,1 +1,1 @@
-Aleksandar, Ristov, 122093
+Aleksandar Ristov, 122093
